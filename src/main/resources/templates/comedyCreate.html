@@ -3,12 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <title>movieCreate Page</title>
+<link rel="stylesheet" th:href="@{/css/style.css}"></link>
 </head>
 <body>
 <h1>Comedy Movie Create Page</h1>
-<div>
+<span>코메디 영화 추가▼</span>
+<ul class="nav">
+<li>
 <a th:href="@{/comedy}">목록이동</a>
-</div>
+</li>
+</ul>
 
 <form id="movieFrom" th:action="@{/comedy/create}" method="post">
 <label for="movieName">영화제목</label>

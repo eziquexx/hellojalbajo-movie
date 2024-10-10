@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+h1, span {
+	display: block;
+	text-align: center;
+}
+h1 { margin-top: 20px;}
+span { margin-top: 40px;}
+ul {
+	width: 30%;
+	justify-content: center;
+	margin: 20px auto 0;
+}
+ul.nav { display: flex; }
+ul.nav li {
+	display: block;
+}
+ul.nav li:not(:last-child) {
+	margin-right: 16px;
+}
+ul.list {
+	border: 1px solid #ddd;
+	padding: 20px;
+}
+ul.list li:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+/* form */
+form {
+	width: 40%;
+	padding: 20px;
+	margin: 20px auto 0;
+	border: 1px solid #ddd;
+}
+
+#movieList {
+	width: 50%;
+	justify-content: center;
+	margin: 20px auto 0;
+	border: 1px solid #ddd;
+}
+#movieList li span { display: inline-block;}

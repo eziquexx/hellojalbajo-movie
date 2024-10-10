@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>index</title>
+<link rel="stylesheet" th:href="@{/css/style.css}"></link>
+</head>
+<body>
+<h1>Main Page</h1>
+<span>메뉴 선택▼</span>
+<ul class="nav">
+<li><a th:href="@{/action}">액션</a></li>
+<li><a th:href="@{/comedy}">코메디</a></li>
+</ul>
+</body>
+</html>

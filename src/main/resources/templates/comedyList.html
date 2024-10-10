@@ -3,14 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <title>Comedy List</title>
+<link rel="stylesheet" th:href="@{/css/style.css}"></link>
 </head>
 <h1>Comedy List Page</h1>
-<div>
-<a th:href="@{/comedy/create}">영화추가</a>
-</div>
+<span>코메디 영화 목록▼</span>
+<ul class="nav">
+<li><a th:href="@{/}">홈으로</a></li>
+<li><a th:href="@{/comedy/create}">영화추가</a></li>
+</ul>
 <div id="coemdyloading">loading... 로딩중...</div>
 <div id="coemdyError">error... 에러 발생...</div>
-<ul id="comedyList"></ul>
+<ul id="comedyList" class="list"></ul>
 
 
 <script th:src="@{/js/comedyList-fetch.js}"></script>
