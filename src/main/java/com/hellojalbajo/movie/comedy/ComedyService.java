@@ -21,4 +21,14 @@ public class ComedyService {
 	public Movie getComedy(Integer id) {
 		return comedyMapper.getComedyById(id);
 	}
+	
+	// create
+	public void createMovieAPI(Movie movie) {
+		comedyMapper.insertMovie(movie);
+	}
+	
+	// delete
+	public void deleteMovie(Integer id) {
+		comedyMapper.deleteMovieById(id);
+	}
 }

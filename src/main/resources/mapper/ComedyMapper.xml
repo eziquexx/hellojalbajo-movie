@@ -11,4 +11,12 @@
 	<select id="getComedyById" resultType="com.hellojalbajo.movie.Movie">
 		select * from ott_moviedb_comedy where id = #{id};
 	</select>
+	
+	<insert id="insertMovie" parameterType="com.hellojalbajo.movie.Movie">
+		insert into ott_moviedb_comedy (moviename, production_year, description) values (#{moviename}, #{production_year}, #{description});
+	</insert>
+	
+	<delete id="deleteMovieById" parameterType="com.hellojalbajo.movie.Movie">
+		delete from ott_moviedb_comedy where id = #{id};
+	</delete>
 </mapper>

@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head></head>
+<head>
 <meta charset="UTF-8">
 <title>Comedy List</title>
+</head>
 <h1>Comedy List Page</h1>
+<div>
+<a th:href="@{/comedy/create}">영화추가</a>
+</div>
 <div id="coemdyloading">loading... 로딩중...</div>
 <div id="coemdyError">error... 에러 발생...</div>
 <ul id="comedyList"></ul>

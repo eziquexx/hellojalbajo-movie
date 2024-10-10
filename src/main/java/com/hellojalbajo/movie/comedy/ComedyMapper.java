@@ -14,4 +14,10 @@ public interface ComedyMapper {
 	
 	// detail
 	Movie getComedyById(Integer id);
+	
+	// create
+	void insertMovie(Movie movie);
+	
+	// delete
+	void deleteMovieById(Integer id);
 }

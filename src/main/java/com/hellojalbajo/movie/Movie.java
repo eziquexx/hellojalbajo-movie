@@ -3,7 +3,7 @@ package com.hellojalbajo.movie;
 public class Movie {
    
     private int id;
-    private String movieName;
+    private String moviename;
     private String production_year;
     private String description;
 
@@ -13,7 +13,7 @@ public class Movie {
     }
 
     public String getMovieName(){
-        return movieName;
+        return moviename;
     }
 
     public String getProduction_year(){
@@ -29,8 +29,8 @@ public class Movie {
         this.id = id;
     }
 
-    public void setMovieName(String movieName){
-        this.movieName = movieName;
+    public void setMovieName(String moviename){
+        this.moviename = moviename;
     }
     
     public void setProductionYear(String production_year){
