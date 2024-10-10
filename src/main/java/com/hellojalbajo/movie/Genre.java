@@ -7,7 +7,7 @@ public class Genre {
     private Integer productionYear;
     private String description;
 
-    // Getter and Setter for id
+
     public Integer getId() {
         return id;
     }
@@ -16,7 +16,7 @@ public class Genre {
         this.id = id;
     }
 
-    // Getter and Setter for moviename
+
     public String getMoviename() {
         return moviename;
     }
@@ -25,7 +25,7 @@ public class Genre {
         this.moviename = moviename;
     }
 
-    // Getter and Setter for production_year
+
     public Integer getProduction_year() {
         return productionYear;
     }
@@ -34,7 +34,7 @@ public class Genre {
         this.productionYear = productionYear;
     }
 
-    // Getter and Setter for description
+
     public String getDescription() {
         return description;
     }
