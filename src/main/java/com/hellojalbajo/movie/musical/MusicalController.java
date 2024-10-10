@@ -26,7 +26,7 @@ public class MusicalController {
 	public String getMusical(@PathVariable("id") Integer id, Model model) {
 		// Integer id = 1;
 		Movie movie= musicalService.getMusical(id);
-		model.addAttribute("musical",movie);
+		model.addAttribute("movie", movie);
 		return "musicalDetail";
 	}
 	
@@ -40,7 +40,7 @@ public class MusicalController {
 	
 	@GetMapping
 	public String getList() {
-		return "musicalList";
+		return "musicalList2";
 	}
 	
 	

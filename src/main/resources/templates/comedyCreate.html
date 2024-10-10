@@ -7,7 +7,7 @@
 </head>
 <body>
 <h1>Comedy Movie Create Page</h1>
-<span>코메디 영화 추가▼</span>
+<span  class="subTitle">코메디 영화 추가▼</span>
 <ul class="nav">
 <li>
 <a th:href="@{/comedy}">목록이동</a>
@@ -26,9 +26,10 @@
 <label for="description">영화설명</label>
 <textarea id="description" name="description" placeholder="영화 설명"></textarea>
 <br/>
-
-<button type="reset">초기화</button>
-<button type="submit">추가</button>
+<div class="btnGroup">
+		<button class="resetBtn" type="reset">초기화</button>
+		<button class="addBtn" type="submit">추가</button>
+	</div>
 </form>
 
 <script th:src="@{/js/comedyCreate-fetch.js}"></script>

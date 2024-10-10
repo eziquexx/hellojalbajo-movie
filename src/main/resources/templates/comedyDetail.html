@@ -17,8 +17,10 @@
 <li th:text="'영화 설명: ' + ${movie.description}"></li>
 <li th:text="'영화 개봉 연도: ' + ${movie.productionYear}"></li>
 </ul>
+<div class="btnGroup">
+	<button class="delBtn" th:onclick="'deleteItem('+ ${movie.id} +')'">삭제</button>
+</div>
 
-<button class="delBtn" th:onclick="'deleteItem('+ ${movie.id} +')'">삭제</button>
 <script th:src="@{/js/delete.js}"></script>
 </body>
 </html>

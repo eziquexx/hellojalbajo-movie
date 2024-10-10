@@ -5,7 +5,7 @@
 	padding: 0;
 	list-style: none;
 }
-h1, span {
+h1, span.subTitle {
 	display: block;
 	text-align: center;
 }
@@ -39,21 +39,21 @@ form {
 	border: 1px solid #ddd;
 }
 
-#movieList {
-	width: 50%;
-	justify-content: center;
-	margin: 20px auto 0;
-	border: 1px solid #ddd;
-}
-#movieList li span { display: inline-block;}
 
-.delBtn {
+.btnGroup {
+	display: flex;
+	margin-top: 40px;
+	justify-content: center;
+}
+.delBtn, .addBtn, .resetBtn {
 	display:block;
-	margin: 0 auto;
 	padding: 10px 18px;
-    margin-top: 40px;
+	margin: 0 10px;
     background-color: #ed5252;
     color: #ffffff;
     border: 0;
     border-radius: 4px;
+    cursor: pointer;
 }
+.addBtn { background-color: #2a7ce2; }
+.resetBtn { background-color: #dc6757; }

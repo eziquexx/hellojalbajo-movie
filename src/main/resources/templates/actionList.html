@@ -8,21 +8,18 @@
 </head>
 <body>
   <h1 th:text="${title}+ ' List Page'"></h1>
-  <span>액션 영화 목록▼</span>
-  <div class="btnGroup">
-    <ul class="nav">
-      <li><a th:href="@{/}">홈으로 이동</a></li>
-    </ul>
-  </div>
+  <span  class="subTitle">액션 영화 목록▼</span>
+<ul class="nav">
+<li><a th:href="@{/}">홈으로</a></li>
+<li><a th:href="@{/action/create}">영화추가</a></li>
+</ul>
 
-  <div id="movieList">
-    <ul>
-      <li th:each="data : ${lstData}">
-        <a th:href="@{/{title}/{id}(title=${title}, id=${data.id})}"  th:text="${data.movieName} + ' (' + ${data.productionYear} + ')'">
-        </a>
-        - <span th:text="${data.description}"></span>
-      </li>
-    </ul>
-  </div>
+<ul id="movieList" class="list">
+  <li th:each="data : ${lstData}">
+    <a th:href="@{/{title}/{id}(title=${title}, id=${data.id})}"  th:text="${data.movieName} + ' (' + ${data.productionYear} + ')'">
+    </a>
+    - <span th:text="${data.description}"></span>
+  </li>
+</ul>
 </body>
 </html>

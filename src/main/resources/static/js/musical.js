@@ -3,7 +3,7 @@ document.getElementById('musicalForm').addEventListener('submit', function(e) {
     
     const musical = {
         movieName: document.getElementById('musical_name').value,
-		production_year: document.getElementById('musical_proct').value,
+		productionYear: document.getElementById('musical_proct').value,
     	description: document.getElementById('musical_descript').value
 		
 		};

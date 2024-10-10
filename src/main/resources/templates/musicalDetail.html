@@ -1,13 +1,22 @@
 <!DOCTYPE html>
-<html xmls:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>Detail</title>
+<title>Musical Detail</title>
+<link rel="stylesheet" th:href="@{/css/style.css}"></link>
 </head>
 <body>
-<h1 th:text="${musical.movieName}"></h1>
-<p th:text="'Name : '+${musical.movieName}" ></p>
-<p th:text="'production_year : '+${musical.production_year}" ></p>
-<p th:text="'DESCRIPTION : '+${musical.description}" ></p>
+<h1>Musical Detail Page</h1>
+<h1 th:text="${movie.movieName}"></h1>
+<ul class="nav">
+<li><a th:href="@{/}">홈으로</a></li>
+<li><a th:href="@{/musical}">목록으로</a></li>
+</ul>
+
+<ul class="detail">
+<li th:text="'Name : ' + ${movie.movieName}" ></li>
+<li th:text="'production_year : ' + ${movie.productionYear}" ></li>
+<li th:text="'DESCRIPTION : ' + ${movie.description}" ></li>
+</ul>
 </body>
 </html>

@@ -4,23 +4,30 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Insert title here</title>
-<link rel="stylesheet" th:href="@{/css/musical.css}">
+<link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
-	<div class="container">
-		<h1>Musical 영화 추가하기</h1>
-		<form id="musicalForm" th:action="@{/musical}" method="post">
-			<label for="musical">제목:</label>
-			<input type=text id="musical_name" name="musical_name" required/><br>
-			<label for="musical">제작년도:</label>
-			<input type=text id="musical_proct" name="musical_proct" required/><br>
-			<label for="musical">상세설명:</label>
-			<input type=text id="musical_descript" name="musical_descript" required/>
-			<br>
-			<button type="submit">추가하기</button>
-		</form>
+<h1>Musical Movie Create Page</h1>
+<span class="subTitle">뮤지컬 영화 추가▼</span>
+<ul class="nav">
+<li>
+<a th:href="@{/musical}">목록이동</a>
+</li>
+</ul>
+<form id="musicalForm" th:action="@{/musical}" method="post">
+	<label for="musical">제목:</label>
+	<input type=text id="musical_name" name="musical_name" required/><br>
+	<label for="musical">제작년도:</label>
+	<input type=text id="musical_proct" name="musical_proct" required/><br>
+	<label for="musical">상세설명:</label>
+	<input type=text id="musical_descript" name="musical_descript" required/>
+	<br>
+	<div class="btnGroup">
+		<button class="resetBtn" type="reset">초기화</button>
+		<button class="addBtn" type="submit">추가</button>
 	</div>
-	
+</form>
+
 	<script th:inline="javascript">
 		const contextPath = /*[[@{/}]]*/'';
 	</script>

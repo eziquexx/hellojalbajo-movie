@@ -40,6 +40,7 @@ public class ActionController {
     	return "actionCreate";
     }
     @PostMapping("create")
+    @ResponseBody
     public void POSTSetActionMovie(@RequestBody Movie movie){
         _service.setActionMovie(movie);
     }

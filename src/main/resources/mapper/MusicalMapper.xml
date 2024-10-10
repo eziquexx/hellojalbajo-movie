@@ -10,6 +10,6 @@
     </select>
     
        <insert id="insertMusical" parameterType="com.hellojalbajo.movie.Movie">
-    	INSERT INTO ott_moviedb_musical (moviename,production_year,DESCRIPTION) VALUES (#{movieName},#{production_year},#{description})
+    	INSERT INTO ott_moviedb_musical (moviename, production_year, description) VALUES (#{movieName},#{production_year},#{description})
     </insert>
 </mapper>
