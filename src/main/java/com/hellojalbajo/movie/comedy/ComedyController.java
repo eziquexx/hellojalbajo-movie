@@ -34,8 +34,9 @@ public class ComedyController {
 	
 	// comedy detail
 	@GetMapping("/{id}")
-	@ResponseBody
-	public Movie getComedy(@PathVariable("id") Integer id) {
-		return comedyService.getComedy(id);
+	public String getComedy(@PathVariable("id") Integer id, Model model) {
+		Movie movie = comedyService.getComedy(id);
+		model.addAttribute("movie", movie);
+		return "comedyDetail";
 	}
 }
