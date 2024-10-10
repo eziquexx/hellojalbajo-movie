@@ -19,4 +19,7 @@ public class DocumentaryService {
     public List<Genre> getDocumentaryList() {
         return documentaryMapper.getDocumentaryList();
     }
-}
+    public void setMovieInfo(Genre genre){
+        documentaryMapper.setMovieInfo(genre);
+    }
+    }

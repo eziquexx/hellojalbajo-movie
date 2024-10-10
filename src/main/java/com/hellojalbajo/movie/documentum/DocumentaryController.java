@@ -1,7 +1,6 @@
 package com.hellojalbajo.movie.documentum;
-
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -24,11 +23,16 @@ public class DocumentaryController {
         return "documentaryList";
     }
     @GetMapping("/create")
-//    @ResponseBody
+//    @ResponseBod
+
         public String create(){
         return "create";
     }
-
+    @PostMapping("/create")
+    @ResponseBody
+    public void make(@RequestBody Genre genre){
+        documentaryService.setMovieInfo(genre);
+    }
     }
 
 
