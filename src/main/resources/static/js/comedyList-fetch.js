@@ -26,7 +26,7 @@ function comedyListFetch() {
 		
 		comedy.forEach(item => {
 			const li = document.createElement("li");
-			li.innerHTML = `<a href="${item.id}">${item.id} - ${item.movieName}(${item.productionYear})</a>`;
+			li.innerHTML = `<a href="comedy/${item.id}">${item.id} - ${item.movieName}(${item.production_year})</a>`;
 			comedyList.appendChild(li);
 		})
 	})
