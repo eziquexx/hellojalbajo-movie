@@ -29,8 +29,8 @@ public class Movie {
         this.id = id;
     }
 
-    public void setMovieName(String movieName){
-        this.movieName = movieName;
+    public void setMovieName(String moviename){
+        this.movieName = moviename;
     }
     
     public void setProductionYear(String production_year){
