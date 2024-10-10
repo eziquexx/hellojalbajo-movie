@@ -35,6 +35,10 @@ public class ActionController {
         return _service.getActionMovie(id);
     }*/
 
+    @GetMapping("create")
+    public String createMovie() {
+    	return "actionCreate";
+    }
     @PostMapping("create")
     public void POSTSetActionMovie(@RequestBody Movie movie){
         _service.setActionMovie(movie);
@@ -44,14 +48,14 @@ public class ActionController {
     public String GETActionMoive(@PathVariable("id") int id, Model model){
         model.addAttribute("title","action");
         model.addAttribute("movieData",_service.getActionMovie(id));
-        return "MovieDetail";
+        return "actionDetail";
     }
 
     @GetMapping
     public String GETMovieListPage(Model model) {
         model.addAttribute("title","action");
         model.addAttribute("lstData",_service.getActionMovieList());
-        return "MovieList";
+        return "actionList";
     }
 
 }

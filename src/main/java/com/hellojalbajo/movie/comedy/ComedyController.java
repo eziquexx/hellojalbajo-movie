@@ -48,7 +48,6 @@ public class ComedyController {
 	@PostMapping("/create")
 	@ResponseBody
 	public void createMovieAPI(@RequestBody Movie movie) {
-		System.out.println(movie);
 		comedyService.createMovieAPI(movie);
 	}
 	
