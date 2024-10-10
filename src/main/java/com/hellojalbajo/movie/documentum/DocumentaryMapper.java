@@ -9,4 +9,8 @@ import java.util.List;
 public interface DocumentaryMapper {
     Genre getDocumentaryById(Integer id);
     List<Genre> getDocumentaryList();
+    void setMovieInfo(Genre genre);
 }
+
+
+

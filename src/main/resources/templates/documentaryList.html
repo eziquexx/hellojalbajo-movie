@@ -10,15 +10,17 @@
 <h1 th:text="${title}"></h1>
 <div class="btnGroup">
   <ul>
-    <li><a th:href="@{/}">홈으로 이동</a></li>
-    <li><a th:href="@{/documentary}">목록으로 이동</a></li>
+
+
+    <li><a th:href="@{/documentary/create}">생성</a></li>
   </ul>
 </div>
 
 <div id="documentaryList">
   <ul>
     <li th:each="documentary : ${documentaries}">
-      <a th:href="@{/documentary/{id}(id=${documentary.id})}" th:text="${documentary.moviename} + ' (' + ${documentary.productionYear} + ')'">
+      <a th:href="@{/documentary/{id}(id=${documentary.id})}"
+         th:text="${documentary.movieName} + ' (' + ${documentary.productionYear} + ')'">
       </a>
       - <span th:text="${documentary.description}"></span>
     </li>
