@@ -8,16 +8,17 @@
 <body>
 <h1>Comedy Detail Page</h1>
 <h1 th:text="${movie.movieName}"></h1>
-<div>
-<a th:href="@{/comedy}">목록 이동</a>
-</div>
-<ul>
+<ul class="nav">
+<li><a th:href="@{/}">홈으로</a></li>
+<li><a th:href="@{/comedy}">목록으로</a></li>
+</ul>
+<ul class="detail">
 <li th:text="'영화 이름: ' + ${movie.movieName}"></li>
 <li th:text="'영화 설명: ' + ${movie.description}"></li>
 <li th:text="'영화 개봉 연도: ' + ${movie.productionYear}"></li>
 </ul>
 
-<button th:onclick="'deleteItem('+ ${movie.id} +')'">삭제</button>
+<button class="delBtn" th:onclick="'deleteItem('+ ${movie.id} +')'">삭제</button>
 <script th:src="@{/js/delete.js}"></script>
 </body>
 </html>

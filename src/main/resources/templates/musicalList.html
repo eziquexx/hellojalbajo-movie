@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Musical List Page</h1>
+<span>뮤지컬 영화 목록▼</span>
+<ul class="nav">
+<li><a th:href="@{/}">홈으로</a></li>
+<li><a th:href="@{/musical/create}">영화추가</a></li>
+</ul>
+<ul id="musicalList">
+
+</ul>
+<script type="text/javascript" th:src="@{js/musicalList.js}"></script>
+</body>
+</html>

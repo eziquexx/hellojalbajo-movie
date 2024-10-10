@@ -4,10 +4,12 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 
+import com.hellojalbajo.movie.Movie;
+
 @Mapper
 public interface MusicalMapper {
 
-	Musical getMusicalById(Integer id);
-	List<Musical> getMusicalLimit10();
-	void insertMusical(Musical musical);
+	Movie getMusicalById(Integer id);
+	List<Movie> getMusicalLimit10();
+	void insertMusical(Movie movie);
 }

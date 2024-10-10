@@ -12,19 +12,21 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.hellojalbajo.movie.Movie;
+
 @Controller
 @RequestMapping("/musical")
 public class MusicalController {
 
 	@Autowired
 	private MusicalService musicalService;
+	
 	//detail
 	@GetMapping("/{id}")
-	
 	public String getMusical(@PathVariable("id") Integer id, Model model) {
 		// Integer id = 1;
-		Musical musical = musicalService.getMusical(id);
-		model.addAttribute("musical",musical);
+		Movie movie= musicalService.getMusical(id);
+		model.addAttribute("musical",movie);
 		return "musicalDetail";
 	}
 	
@@ -32,26 +34,26 @@ public class MusicalController {
 	//List
 	@GetMapping("/api")
 	@ResponseBody
-	public List<Musical> getMusical() {
+	public List<Movie> getMusical() {
 		return musicalService.getMusicalLimit10();
 	}
 	
 	@GetMapping
 	public String getList() {
-		return "musicallist";
+		return "musicalList";
 	}
 	
 	
 	
 	@GetMapping("/create")
 	public String create() {
-		return "create-musical";
+		return "musicalCreate";
 	}
 
 	@PostMapping
 	@ResponseBody
-	public void createMusical(@RequestBody Musical musical) {
-		musicalService.createMusical(musical);
+	public void createMusical(@RequestBody Movie movie) {
+		musicalService.createMusical(movie);
 	}
 	
 	

@@ -23,7 +23,7 @@ ul.nav li {
 ul.nav li:not(:last-child) {
 	margin-right: 16px;
 }
-ul.list {
+ul.list, ul.detail {
 	border: 1px solid #ddd;
 	padding: 20px;
 }
@@ -46,3 +46,14 @@ form {
 	border: 1px solid #ddd;
 }
 #movieList li span { display: inline-block;}
+
+.delBtn {
+	display:block;
+	margin: 0 auto;
+	padding: 10px 18px;
+    margin-top: 40px;
+    background-color: #ed5252;
+    color: #ffffff;
+    border: 0;
+    border-radius: 4px;
+}
