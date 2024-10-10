@@ -15,15 +15,13 @@
 <li><a th:href="@{/documentary/create}">영화추가</a></li>
 </ul>
 
-<div id="documentaryList">
-  <ul>
-    <li th:each="documentary : ${documentaries}">
-      <a th:href="@{/documentary/{id}(id=${documentary.id})}"
-         th:text="${documentary.movieName} + ' (' + ${documentary.productionYear} + ')'">
-      </a>
+<ul id="documentaryList" class="list">
+  <li th:each="documentary : ${documentaries}">
+    <a th:href="@{/documentary/{id}(id=${documentary.id})}"
+       th:text="${documentary.movieName} + ' (' + ${documentary.productionYear} + ')'">
+    </a>
 <!--      - <span th:text="${documentary.description}"></span>-->
-    </li>
-  </ul>
-</div>
+  </li>
+</ul>
 </body>
 </html>

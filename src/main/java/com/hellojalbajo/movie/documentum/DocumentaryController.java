@@ -39,7 +39,7 @@ public class DocumentaryController {
     public String getDocumentary(@PathVariable("id") Integer id, Model model) {
     	Movie movie = documentaryService.getDocumentary(id);
     	model.addAttribute("movie", movie);
-    	return "test";
+    	return "documentaryDetail2";
     }
 }
 
