@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.hellojalbajo.movie.Movie;
+
 @Controller
 @RequestMapping("/comedy")
 public class ComedyController {
@@ -20,7 +22,7 @@ public class ComedyController {
 	}
 	@GetMapping("/api")
 	@ResponseBody
-	public List<ComedyDTO> getComedyList() {
+	public List<Movie> getComedyList() {
 		return comedyService.getComedyList();
 	}
 }

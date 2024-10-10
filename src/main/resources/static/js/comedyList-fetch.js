@@ -22,16 +22,20 @@ function comedyListFetch() {
 		return response.json();
 	})
 	.then(comedy => {
-		const li = document.createElement("li");
+		loading.style.display = "none";
 		
 		comedy.forEach(item => {
-			li.innerHTML = `<a href=">${item.id}</a>`;
+			const li = document.createElement("li");
+			li.innerHTML = `<a href="${item.id}">${item.id} - ${item.movieName}(${item.productionYear})</a>`;
+			comedyList.appendChild(li);
 		})
 	})
 	.catch(error => {
 		console.error("error", error);
+		loading.style.display = "none";
+		error.style.display = "block";
 	})
 	
 }
 
-window.addEventListener("submit", comedyListFetch);
+window.addEventListener("DOMContentLoaded", comedyListFetch);

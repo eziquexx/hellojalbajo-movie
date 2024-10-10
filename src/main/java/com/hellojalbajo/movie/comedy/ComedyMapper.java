@@ -4,8 +4,10 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 
+import com.hellojalbajo.movie.Movie;
+
 @Mapper
 public interface ComedyMapper {
 
-	List<ComedyDTO> getComedyList();
+	List<Movie> getComedyList();
 }
