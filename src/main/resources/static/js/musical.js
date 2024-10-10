@@ -2,9 +2,9 @@ document.getElementById('musicalForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
     const musical = {
-        moviename: document.getElementById('musical_name').value,
-		production_year: document.getElementById('musical_proct').value
-    	DESCRIPTION: document.getElementById('musical_descript').value
+        movieName: document.getElementById('musical_name').value,
+		production_year: document.getElementById('musical_proct').value,
+    	description: document.getElementById('musical_descript').value
 		
 		};
 
@@ -17,10 +17,10 @@ document.getElementById('musicalForm').addEventListener('submit', function(e) {
     })
     .then(response => {
         if (response.ok) {
-            alert('메시지가 성공적으로 생성되었습니다.');
+            alert('뮤지컬 정보가 성공적으로 생성되었습니다.');
             document.getElementById('musicalForm').reset();
         } else {
-            alert('메시지 생성에 실패했습니다.');
+            alert('뮤지컬 정보 생성에 실패했습니다.');
         }
     })
     .catch(error => {

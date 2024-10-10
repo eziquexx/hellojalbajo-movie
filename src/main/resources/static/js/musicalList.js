@@ -10,7 +10,7 @@ fetch("/musical/api")
 .then(musicals => {
 	musicals.forEach(musical => {
 		const li = document.createElement("li");
-		li.innerHTML = `<a href="/musical/${musical.id}">id : ${musical.id}, 제목 :${musical.movieName}</a>`
+		li.innerHTML = `<a href="/musical/${musical.id}">${musical.id}, 제목 :${musical.movieName}</a>`
 		musicalList.appendChild(li);
 	})
 })

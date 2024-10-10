@@ -3,7 +3,7 @@ package com.hellojalbajo.movie.musical;
 public class Musical {
 	   private int id;
 	    private String movieName;
-	    private String productionYear;
+	    private String production_year;
 	    private String description;
 
 	    //Getter
@@ -15,8 +15,8 @@ public class Musical {
 	        return movieName;
 	    }
 
-	    public String getProductionYear(){
-	        return productionYear;
+	    public String getProduction_year(){
+	        return production_year;
 	    }
 
 	    public String getDescription(){
@@ -32,8 +32,8 @@ public class Musical {
 	        this.movieName = movieName;
 	    }
 
-	    public void setProductionYear(String productionYear){
-	        this.productionYear = productionYear;
+	    public void setProductionYear(String production_year){
+	        this.production_year = production_year;
 	    }
 
 	    public void setDescription(String description){

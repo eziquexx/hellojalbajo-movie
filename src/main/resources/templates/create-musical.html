@@ -11,9 +11,12 @@
 		<h1>Musical 영화 추가하기</h1>
 		<form id="musicalForm" th:action="@{/musical}" method="post">
 			<label for="musical">제목:</label>
-			<input type=text id="musical_name" name="musical_name" required/>
-			<input type=text id="musical_proct" name="musical_proct" required/>
+			<input type=text id="musical_name" name="musical_name" required/><br>
+			<label for="musical">제작년도:</label>
+			<input type=text id="musical_proct" name="musical_proct" required/><br>
+			<label for="musical">상세설명:</label>
 			<input type=text id="musical_descript" name="musical_descript" required/>
+			<br>
 			<button type="submit">추가하기</button>
 		</form>
 	</div>
