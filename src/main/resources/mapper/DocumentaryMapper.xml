@@ -17,8 +17,8 @@
 
     <!-- Insert a new documentary -->
     <insert id="setMovieInfo" parameterType="com.hellojalbajo.movie.Genre">
-        INSERT INTO ott_moviedb_documentary (name, productionYear, description, genre)
-        VALUES (#{name}, #{productionYear}, #{description}, #{genre})
+        INSERT INTO ott_moviedb_documentary (name, production_year, description, genre)
+        VALUES (#{name}, #{production_year}, #{description}, #{genre})
     </insert>
 
     <!-- Delete a documentary by ID -->
