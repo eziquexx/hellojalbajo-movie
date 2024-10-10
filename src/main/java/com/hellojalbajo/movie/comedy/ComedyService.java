@@ -12,7 +12,13 @@ public class ComedyService {
 	@Autowired
 	private ComedyMapper comedyMapper;
 	
+	// list
 	public List<Movie> getComedyList() {
 		return comedyMapper.getComedyList();
+	}
+	
+	// detail
+	public Movie getComedy(Integer id) {
+		return comedyMapper.getComedyById(id);
 	}
 }

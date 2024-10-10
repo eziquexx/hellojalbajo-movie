@@ -7,4 +7,8 @@
 	<select id="getComedyList" resultType="com.hellojalbajo.movie.Movie">
 		select id, moviename, production_year as productionYear, description from ott_moviedb_comedy;
 	</select>
+	
+	<select id="getComedyById" resultType="com.hellojalbajo.movie.Movie">
+		select * from ott_moviedb_comedy where id = #{id};
+	</select>
 </mapper>
