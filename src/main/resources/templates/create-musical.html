@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="stylesheet" th:href="@{/css/musical.css}">
+</head>
+<body>
+	<div class="container">
+		<h1>Musical 영화 추가하기</h1>
+		<form id="musicalForm" th:action="@{/musical}" method="post">
+			<label for="musical">제목:</label>
+			<input type=text id="musical_name" name="musical_name" required/>
+			<input type=text id="musical_proct" name="musical_proct" required/>
+			<input type=text id="musical_descript" name="musical_descript" required/>
+			<button type="submit">추가하기</button>
+		</form>
+	</div>
+	
+	<script th:inline="javascript">
+		const contextPath = /*[[@{/}]]*/'';
+	</script>
+	<script th:src="@{/js/musical.js}"></script>
+</body>
+</html>
