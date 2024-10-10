@@ -28,16 +28,23 @@ public class ActionController {
         return _service.getActionMovieList();
     }
 
-    @GetMapping("{id}")
+    /*@GetMapping("{id}")
     @ResponseBody
     public Movie GETActionMoive(@PathVariable("id") int id){
 
         return _service.getActionMovie(id);
-    }
+    }*/
 
     @PostMapping("create")
     public void POSTSetActionMovie(@RequestBody Movie movie){
         _service.setActionMovie(movie);
+    }
+
+    @GetMapping("{id}")
+    public String GETActionMoive(@PathVariable("id") int id, Model model){
+        model.addAttribute("title","action");
+        model.addAttribute("movieData",_service.getActionMovie(id));
+        return "MovieDetail";
     }
 
     @GetMapping
