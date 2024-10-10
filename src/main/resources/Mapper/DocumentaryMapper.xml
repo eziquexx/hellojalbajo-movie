@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hellojalbajo.movie.documentum.DocumentaryMapper">
+
+    <!-- Select a documentary by ID -->
+    <select id="getDocumentaryById" parameterType="int" resultType="com.hellojalbajo.movie.Movie">
+        SELECT * FROM ott_moviedb_documentary WHERE id = #{id}
+    </select>
+
+    <!-- Select all documentaries -->
+    <select id="getDocumentaryList" resultType="com.hellojalbajo.movie.Movie">
+        SELECT * FROM ott_moviedb_documentary
+    </select>
+
+    <!-- Insert a new documentary -->
+    <insert id="setMovieInfo" parameterType="com.hellojalbajo.movie.Movie">
+        INSERT INTO ott_moviedb_documentary (moviename, production_year, description)
+        VALUES (#{movieName}, #{production_year}, #{description})
+    </insert>
+
+    <!-- Delete a documentary by ID -->
+    <delete id="deleteItemById" parameterType="int">
+        DELETE FROM ott_moviedb_documentary WHERE id = #{id}
+    </delete>
+
+</mapper>

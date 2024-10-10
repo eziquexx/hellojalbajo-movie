@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+  <title>다큐 생성</title>
+  <link rel="stylesheet" th:href="@{/css/style.css}"></link>
+</head>
+<body>
+<h1>Documentary Movie Create Page</h1>
+<span  class="subTitle">코메디 영화 추가▼</span>
+<ul class="nav">
+<li>
+<a th:href="@{/documentary}">목록이동</a>
+</li>
+</ul>
+
+<form id="createForm" th:action="@{/documentary/create}" method="post">
+	<label for="info_name">제목: </label>
+	<input type="text" id="info_name" name="movieName" placeholder="영화 이름 입력"><br/>
+	
+	<label for="info_year">연도: </label>
+	<input type="text" id="info_year" name="production_year" placeholder="ex) 2024 (숫자만 입력)"><br/>
+	<label for="info_des">설명: </label>
+	<textarea id="info_des" name="description" placeholder="영화 설명 입력" rows="5"></textarea>
+      
+	<div class="btnGroup">
+		<button type="reset" id="resetBtn">리셋</button>
+		<button type="submit" id="submitBtn">추가</button>
+	</div>
+</form>
+
+<script th:src="@{/js/create.js}"></script>
+</body>
+</html>
