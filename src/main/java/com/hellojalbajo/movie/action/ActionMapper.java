@@ -11,6 +11,6 @@ import com.hellojalbajo.movie.Movie;
 public interface ActionMapper {
 
     public List<Movie> getMovieList();
-    public Movie getMoviebyId(int id);
+    public Movie getMovieById(int id);
     public void setActionMovie(Movie movie);
 }

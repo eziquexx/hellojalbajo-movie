@@ -21,11 +21,11 @@ public class ActionService {
     public Movie getActionMovie(int id){
 
 
-        return _mapper.getMoviebyId(id);
+        return _mapper.getMovieById(id);
     }
 
     public void setActionMovie(Movie movie){
-        
+
         _mapper.setActionMovie(movie);
     }
 
