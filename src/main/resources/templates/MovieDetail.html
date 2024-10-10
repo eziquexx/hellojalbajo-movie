@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>doc</title>
+</head>
+<body>
+    <h1 th:text="${title} + 'detail'"></h1>
+    <div class="btnGroup">
+        <ul>
+            <li><a th:href="@{/}">홈으로 이동</a></li>
+            <li><a th:href="@{/{title}(title=${title})}">목록으로 이동</a></li>
+        </ul>
+    </div>
+
+    <div id="movieDetail">
+        <ul>
+            <li class="info_name" th:text="${movieData.movieName} + ' (' + ${movieData.productionYear} + ') - ' + ${title}"></li>
+            <li class="info_des" th:text="${movieData.description}"></li>
+        </ul>
+    </div>
+</body>
+</html>
