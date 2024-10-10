@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.hellojalbajo.movie.DocumentaryMapper">
-    <insert id="setMovieInfo" parameterType="com.hellojalbajo.movie.Genre">
-        INSERT INTO ott_moviedb_documentary (moviename, production_year, description)
-        VALUES (#{moviename}, #{production_year}, #{description})
-    </insert>
-
-</mapper>

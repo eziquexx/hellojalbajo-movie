@@ -5,16 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
   <title th:text="${title}"></title>
+  <link rel="stylesheet" th:href="@{/css/style.css}"></link>
 </head>
 <body>
 <h1 th:text="${title}"></h1>
-<div class="btnGroup">
-  <ul>
-
-
-    <li><a th:href="@{/documentary/create}">생성</a></li>
-  </ul>
-</div>
+<span class="subTitle">다큐 영화 목록▼</span>
+<ul class="nav">
+<li><a th:href="@{/}">홈으로</a></li>
+<li><a th:href="@{/documentary/create}">영화추가</a></li>
+</ul>
 
 <div id="documentaryList">
   <ul>

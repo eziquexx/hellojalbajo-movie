@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
-    <title th:text="${documentary.name}"></title>
+    <title th:text="${documentary.movieName}"></title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"></link>
 </head>
 <body>
 <h1>다큐 상세</h1>
@@ -20,7 +21,7 @@
         <img src="" alt="" th:src="@{/images/${documentary.image}}" />
     </div>
     <ul>
-        <li class="info_name" th:text="${documentary.name} + ' (' + ${documentary.productionYear} + ') - ' + ${documentary.genre}"></li>
+        <li class="info_name" th:text="${documentary.movieName} + ' (' + ${documentary.production_year} + ') - ' + ${documentary.genre}"></li>
         <li class="info_des" th:text="${documentary.description}"></li>
     </ul>
 </div>

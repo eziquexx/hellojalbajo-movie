@@ -6,19 +6,19 @@
 <mapper namespace="com.hellojalbajo.movie.documentum.DocumentaryMapper">
 
     <!-- Select a documentary by ID -->
-    <select id="getDocumentaryById" parameterType="int" resultType="com.hellojalbajo.movie.Genre">
+    <select id="getDocumentaryById" parameterType="int" resultType="com.hellojalbajo.movie.Movie">
         SELECT * FROM ott_moviedb_documentary WHERE id = #{id}
     </select>
 
     <!-- Select all documentaries -->
-    <select id="getDocumentaryList" resultType="com.hellojalbajo.movie.Genre">
+    <select id="getDocumentaryList" resultType="com.hellojalbajo.movie.Movie">
         SELECT * FROM ott_moviedb_documentary
     </select>
 
     <!-- Insert a new documentary -->
-    <insert id="setMovieInfo" parameterType="com.hellojalbajo.movie.Genre">
+    <insert id="setMovieInfo" parameterType="com.hellojalbajo.movie.Movie">
         INSERT INTO ott_moviedb_documentary (moviename, production_year, description)
-        VALUES (#{moviename}, #{production_year}, #{description})
+        VALUES (#{movieName}, #{production_year}, #{description})
     </insert>
 
     <!-- Delete a documentary by ID -->
