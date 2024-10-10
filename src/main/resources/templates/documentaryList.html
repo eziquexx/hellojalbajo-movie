@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+  <title th:text="${title}"></title>
+</head>
+<body>
+<h1 th:text="${title}"></h1>
+<div class="btnGroup">
+  <ul>
+    <li><a th:href="@{/}">홈으로 이동</a></li>
+    <li><a th:href="@{/documentary}">목록으로 이동</a></li>
+  </ul>
+</div>
+
+<div id="documentaryList">
+  <ul>
+    <li th:each="documentary : ${documentaries}">
+      <a th:href="@{/documentary/{id}(id=${documentary.id})}" th:text="${documentary.moviename} + ' (' + ${documentary.productionYear} + ')'">
+      </a>
+      - <span th:text="${documentary.description}"></span>
+    </li>
+  </ul>
+</div>
+</body>
+</html>
