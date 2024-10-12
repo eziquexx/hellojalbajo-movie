@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mappe
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace="com.hellojalbajo.movie.fantasy.FantasyMapper">
+ <select id ="getFantasyList" resultType="com.hellojalbajo.movie.Movie">
+ 	select id, moviename, production_year as productionYear, description from ott_moviedb_fantasy;
+ </select>
+ 
+ <select id ="getFantasyById" resultType="com.hellojalbajo.movie.Movie">
+ 	select* from ott_moviedb_fantasy where id = #{id};
+ </select>
+ 
+ <insert id="insertMovie" parameterType="com.hellojalbajo.movie.Movie">
+ insert into ott_moviedb_fantasy (moviename,production_year,description) values (#{movieName}, #{production_year}, #{description});
+ </insert>
+ 
+ <delete id="deleteMovieById" parameterType="com.hellojalbajo.movie.Movie">
+ delete from ott_moviedb_fantasy where id=#{id};
+ </delete>
+ </mapper>
