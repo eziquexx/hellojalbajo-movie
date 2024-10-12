@@ -1,10 +1,10 @@
 package com.mysite.movie;
 
 public class Movie {
-	private int id;
+	private int id; //영화 ID, 데이터 베이스 고유 식별값
 	private String moviename;
 	private String production_year;
-	private String descrption;
+	private String description;
 	
 	
 	public int getId() {
@@ -25,11 +25,11 @@ public class Movie {
 	public void setProduction_year(String production_year) {
 		this.production_year = production_year;
 	}
-	public String getDescrption() {
-		return descrption;
+	public String getDescription() {
+		return description;
 	}
-	public void setDescrption(String descrption) {
-		this.descrption = descrption;
+	public void setDescription(String descrption) {
+		this.description = description;
 	}
 	
 	

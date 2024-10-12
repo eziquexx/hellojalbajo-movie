@@ -8,7 +8,7 @@ function fantasyListFetch(){
 	
 	loading.style.display = "block";
 	error.style.display = "none";
-	comedyList.innerHTML = "";
+	fantasyList.innerHTML = "";
 	
 	fetch("/fantasy/api")
 	.then(response => {
