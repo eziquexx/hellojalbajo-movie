@@ -1,13 +1,12 @@
 package com.hellojalbajo.movie;
 
 public class Movie {
-   
-    private int id;
-    private String movieName;
-    private String production_year;
-    private String description;
 
-    //Getter
+	private int id; //영화 ID, 데이터 베이스 고유 식별값
+	private String movieName;
+	private String production_year;
+	private String description;
+
     public int getId(){
         return id;
     }
@@ -40,4 +39,5 @@ public class Movie {
     public void setDescription(String description){
         this.description = description;
     }
+
 }
