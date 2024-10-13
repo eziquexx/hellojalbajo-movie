@@ -1,11 +1,11 @@
-package com.mvsite.movie.fantasy;
+package com.hellojalbajo.movie.fantasy;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.mysite.movie.Movie;
+import com.hellojalbajo.movie.Movie;
 
 
 //비즈니스 로직을 처리. 여기서는 데이터 베이스와의 연결을 담당
@@ -22,7 +22,7 @@ public class FantasyService {
 	
 	//특정 ID의 영화를 반환하는 메서드
 	public Movie getFantasy(Integer id) {
-		return fantasyMapper.getFantasyByid(id);//ID를 기준으로 영호를 조회
+		return fantasyMapper.getFantasyById(id);//ID를 기준으로 영호를 조회
 	}
 	
 	//새로운 영화를 생성하는 메서드

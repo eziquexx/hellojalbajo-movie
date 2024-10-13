@@ -9,6 +9,6 @@ function deleteItem(id){
 		form.action = url;
 		
 		document.body.appendChild(form);
-		form.onsubmit();//폼 제출
+		form.submit();//폼 제출
 	}
 }

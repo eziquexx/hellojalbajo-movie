@@ -1,27 +1,27 @@
 /**
  * 
  */
-const movieFrom = document.getElementById("movieFrom");
+const movieForm = document.getElementById("movieForm");
 
-movieFrom.addEventListener("submit",function(e){
+movieForm.addEventListener("submit",function(e){
 	e.preventDefault();
 	
 	const movie = {
 		"movieName":document.getElementById("movieName").value,
 		"productionYear": document.getElementById("productionYear").value,
-		"description":document.getElementById("descrption").value,
+		"description":document.getElementById("description").value,
 	}
 	fetch("/fantasy/create", {
-		method:{
+		method: "POST",
+		headers: {
 			"Content-Type": "application/json",
 		},
 		body:JSON.stringify(movie),
 	})
 	.then(response => {
 		if (response.ok) {
-			console.log(movie);
 			alert("데이터 추가 성공");
-			movieFrom.reset();
+			movieForm.reset();
 		}else{
 			alert("데이터 추가 실패");
 		}

@@ -1,4 +1,4 @@
-package com.mvsite.movie.fantasy;
+package com.hellojalbajo.movie.fantasy;
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.mysite.movie.Movie;
+import com.hellojalbajo.movie.Movie;
 
 @Controller
 @RequestMapping("/fantasy")
@@ -31,7 +31,7 @@ public class FantasyController {
 	
 	
 	//APT요청을 처리하고 jsn형식으로 영화  목록을 반환
-	@GetMapping("api")
+	@GetMapping("/api")
 	@ResponseBody
 	public List<Movie> getFantasyList(){
 		return fantasyService.getFantasyList();//Service레이어에서 영화 목록을 받아옴
@@ -45,18 +45,21 @@ public class FantasyController {
 	    return "fantasyDetail";//"fantasyDetail.html"뷰를 반환한다
 	}
 	
-	
-	//새로운 영화를 생성하는 API 처리한다
+	// localhost:8080/fantasy/create로 접속시 브라우저 화면에 보일 html 문서 연결하기.
 	@GetMapping("/create")
+	public String createMovieFantasy() {
+		return "fantasyCreate";
+	}
+	//새로운 영화를 생성하는 API 처리한다
+	@PostMapping("/create")
 	@ResponseBody
 	public void createMovieAPI(@RequestBody Movie movie) {
-		System.out.println(movie);
 		fantasyService.createMovieAPI(movie);//요청 본문에서 영화 데이터를 받아 생성
 	}
 	
 	
 	//영화 삭제 요청을 처리 한다 
-	@DeleteMapping("/detail/{id}")
+	@PostMapping("/delete/{id}")
 	public String deleteMovie(@PathVariable("id") Integer id) {
 		fantasyService.deleteMovie(id);
 		return "redirect:/fantasy";

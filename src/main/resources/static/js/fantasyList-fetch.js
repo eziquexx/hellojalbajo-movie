@@ -3,7 +3,7 @@
  */
 function fantasyListFetch(){
 	const loading = document.getElementById("fantasyloading");
-	const error =document.getElementById("fantasyError");
+	const error = document.getElementById("fantasyError");
 	const fantasyList = document.getElementById("fantasyList");
 	
 	loading.style.display = "block";
@@ -32,4 +32,4 @@ function fantasyListFetch(){
 		error.style.display="block";
 	})
 }
-window.addEventListener("DOMContentLoaded",comedyListFetch);
+window.addEventListener("DOMContentLoaded", fantasyListFetch);

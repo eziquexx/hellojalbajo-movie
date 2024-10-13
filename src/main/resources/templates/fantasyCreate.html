@@ -10,7 +10,7 @@
 <a th:href="@{/fantasy}">목록 이동</a>
 </div>
 
-<form id="movieFrom" th:action = "@{/fantasy/create}" method="Post">
+<form id="movieForm" th:action = "@{/fantasy/create}" method="Post">
 <label for = "movieName"> 영화제목</label>
 <input type ="text" id="movieName" name ="moviename" placeholder="영화이름 입력">
 <br/>
@@ -19,7 +19,7 @@
 <input type ="text" id="productionYear" name ="production_year" placeholder="영화 제작연도 (숫자만 입력)">
 <br/>
 
-<label for ="descriptoin">영화설명</label>
+<label for ="description">영화설명</label>
 <textarea id="description" name ="description" placeholder="영화 설명"></textarea>
 <br/>
 
