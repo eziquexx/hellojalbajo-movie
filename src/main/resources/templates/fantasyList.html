@@ -2,16 +2,20 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fantasy List</title>
+<link rel="stylesheet" th:href="@{/css/style.css}"></link>
 </head>
-<h1>Fantasy List Page</h1>
 <body>
-<div>
-<a th:href="@{/fantasy/create}">영화 추가</a>
-</div>
+<h1>Fantasy List Page</h1>
+<span class="subTitle">판타지 영화 목록▼</span>
+<ul class="nav">
+<li><a th:href="@{/}">홈으로</a></li>
+<li><a th:href="@{/fantasy/create}">영화추가</a></li>
+</ul>
 <div id="fantasyloading">loading..로딩중...</div>
 <div id="fantasyError">error...에러발생...</div>
-<ul id="fantasyList"></ul>
+<ul id="fantasyList" class="list"></ul>
 
 
 <script th:src="@{/js/fantasyList-fetch.js}"></script>
