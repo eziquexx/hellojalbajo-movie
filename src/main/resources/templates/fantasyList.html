@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Fantasy List</title>
+</head>
+<h1>Fantasy List Page</h1>
+<body>
+<div>
+<a th:href="@{/fantasy/create}">영화 추가</a>
+</div>
+<div id="fantasyloading">loading..로딩중...</div>
+<div id="fantasyError">error...에러발생...</div>
+<ul id="fantasyList"></ul>
+
+
+<script th:src="@{/js/fantasyList-fetch.js}"></script>
+</body>
+</html>

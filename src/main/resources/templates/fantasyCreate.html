@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleah.org">
+<head>
+<meta charset="UTF-8">
+<title>mevieCreate Page</title>
+</head>
+<body>
+<h1>fantasy movie Create Page</h1>
+<div>
+<a th:href="@{/fantasy}">목록 이동</a>
+</div>
+
+<form id="movieForm" th:action = "@{/fantasy/create}" method="Post">
+<label for = "movieName"> 영화제목</label>
+<input type ="text" id="movieName" name ="moviename" placeholder="영화이름 입력">
+<br/>
+
+<label for ="productionYear">제작연도</label>
+<input type ="text" id="productionYear" name ="production_year" placeholder="영화 제작연도 (숫자만 입력)">
+<br/>
+
+<label for ="description">영화설명</label>
+<textarea id="description" name ="description" placeholder="영화 설명"></textarea>
+<br/>
+
+<button type="reset">초기화</button>
+<button type="submit">추가</button></form>
+
+
+<script th:src="@{/js/fantasyCreate-fetch.js}"></script>
+
+
+</body>
+</html>

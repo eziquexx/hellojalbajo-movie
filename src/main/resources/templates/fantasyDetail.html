@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>fantasy Detil</title>
+</head>
+<body>
+<h1>Fantasy Detail page</h1>
+<h1 th:text="${movie.movieName}" ></h1>
+<div>
+<a th:href = "@{/fantasy}">목록이동</a>
+</div>
+<ul>
+ <li th:text="'영화 이름: ' + ${movie.movieName}" ></li>
+ <li th:text="'영화 설명: ' + ${movie.description}"></li>
+ <li th:text="'영화 개봉 연도' + ${movie.productionYear}"></li>
+ </ul>
+<button th:onclick="'deleteItem('+ ${movie.id} +')'">삭제</button>
+<script th:src="@{/js/fantasyDelete.js}"></script>
+</body>
+</html>
